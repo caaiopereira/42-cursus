@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caiperei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 15:44:04 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/24 11:46:19 by caiperei         ###   ########.fr       */
+/*   Created: 2023/10/24 11:02:12 by caiperei          #+#    #+#             */
+/*   Updated: 2023/10/24 11:13:41 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned char		*destiny;
-	const unsigned char	*source;
+	size_t	little_len;
 
-	destiny = (unsigned char *)dest;
-	source = (const unsigned char *)src;
-	if (destiny < source)
+	little_len = ft_strlen(little);
+	if (little_len == 0)
 	{
-		while (n--)
-		{
-			*destiny = *source;
-			destiny++;
-			source++;
-		}
+		return ((char *)big);
 	}
-	else if (destiny > source)
+	while (*big && len >= little_len)
 	{
-		destiny = n + destiny;
-		source = n + source;
-		while (n--)
+		if (ft_strncmp(big, little, little_len) == 0)
 		{
-			*(--destiny) = *(--source);
+			return ((char *)big);
 		}
+		big++;
+		len--;
 	}
-	return (dest);
+	return (0);
 }
