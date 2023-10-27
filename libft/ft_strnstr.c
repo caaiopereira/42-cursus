@@ -17,10 +17,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	little_len;
 
 	little_len = ft_strlen(little);
-	if (little_len == 0 || len == 0)
+	if (little_len == 0)
 	{
 		return ((char *)big);
 	}
+	if (len == 0)
+		return (0);
 	while (*big && len >= little_len)
 	{
 		if (ft_strncmp(big, little, little_len) == 0)
