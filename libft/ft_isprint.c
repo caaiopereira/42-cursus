@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:04:04 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:04:09 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:48:42 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	verifica qualquer caractere imprimivel
+*/
 #include "libft.h"
 
 int	ft_isprint(int c)
