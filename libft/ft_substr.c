@@ -6,12 +6,12 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:08:38 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/31 10:01:33 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 14:43:28 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	pega uma parte da string e cria uma menor a partir dela
+	Extrai uma substring de uma string maior.
 */
 #include "libft.h"
 
