@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:11:17 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:11:19 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:18:25 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	duplica uma string e retorna a cópia duplicada
+*/
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

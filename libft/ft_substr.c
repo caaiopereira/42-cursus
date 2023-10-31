@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:08:38 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:08:40 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:01:33 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	pega uma parte da string e cria uma menor a partir dela
+*/
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

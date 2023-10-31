@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:13:57 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:14:00 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:32:43 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Aplica uma função a cada caractere de uma string.
+*/
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))

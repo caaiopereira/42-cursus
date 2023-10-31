@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:16:36 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:16:40 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:38:19 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Concatena duas strings
+*/
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

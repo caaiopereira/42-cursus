@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:15:42 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:15:44 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:35:53 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Compara duas áreas de memória.
+*/
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

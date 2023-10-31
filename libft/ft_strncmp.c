@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:14:13 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:14:17 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:34:14 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Compara duas strings até um número especificado de caracteres.
+*/
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

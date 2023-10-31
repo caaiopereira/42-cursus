@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:02:45 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:02:51 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:53:15 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Remove espaços em branco do início e do final de uma string.
+*/
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

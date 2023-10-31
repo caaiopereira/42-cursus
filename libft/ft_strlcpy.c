@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:01:35 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:01:42 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:52:00 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Copia uma string em outra com controle de tamanho.
+*/
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:59:23 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 15:59:32 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:46:08 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Copia uma área de memória para outra, mesmo se houver sobreposição.
+*/
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

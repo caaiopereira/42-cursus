@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:16:12 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:16:15 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:37:42 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	converte um número inteiro em sua representação de texto e a imprime
+*/
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:10:48 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:10:50 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:13:58 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	imprime um caractere
+*/
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)

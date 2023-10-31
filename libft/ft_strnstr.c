@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:17:04 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:17:07 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:39:03 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Localiza uma substring em uma string, limitada por um tamanho máximo.
+*/
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

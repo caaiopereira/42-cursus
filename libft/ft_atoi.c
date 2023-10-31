@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:57:07 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 15:57:22 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:45:08 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Converte uma string em um número inteiro (ASCII para inteiro).
+*/
 #include "libft.h"
 
 int	ft_atoi(const char *nptr)

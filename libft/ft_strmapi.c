@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:11:39 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:11:41 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:29:19 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Aplica uma função a cada caractere de uma string e retorna uma nova string.
+*/
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

@@ -6,10 +6,13 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 16:01:03 by caiperei          #+#    #+#             */
-/*   Updated: 2023/10/30 16:01:10 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/10/31 10:49:00 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+	Divide uma string em substrings com base em um delimitador.
+*/
 #include "libft.h"
 
 static size_t	ft_toklen(const char *s, char c)
