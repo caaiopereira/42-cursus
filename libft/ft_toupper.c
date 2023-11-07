@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Converte um caractere em maiúscula (se for uma letra minúscula).
-*/
 #include "libft.h"
 
 int	ft_toupper(int c)

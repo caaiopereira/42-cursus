@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Localiza a primeira ocorrência de um caractere em uma string.
-*/
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)

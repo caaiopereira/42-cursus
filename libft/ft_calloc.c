@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	usada para alocar memoria dinamicamente para armazenar um bloco 
-	e inicializa-los com zeros
-*/
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)

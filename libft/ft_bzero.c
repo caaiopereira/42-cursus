@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Preenche uma região de memória com zeros.
-*/
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

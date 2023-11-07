@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Localiza uma substring em uma string, limitada por um tamanho máximo.
-*/
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

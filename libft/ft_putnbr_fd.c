@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	converte um número inteiro em sua representação de texto e a imprime
-*/
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

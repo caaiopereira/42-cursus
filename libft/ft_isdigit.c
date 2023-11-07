@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Verifica se um caractere é um dígito.
-*/
 #include "libft.h"
 
 int	ft_isdigit(int c)

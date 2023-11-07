@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-  Escreve uma string seguida de uma quebra de linha em um descritor de arquivo.
-*/
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

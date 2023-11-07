@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Verifica se um caractere é um caractere imprimível.
-*/
 #include "libft.h"
 
 int	ft_isprint(int c)

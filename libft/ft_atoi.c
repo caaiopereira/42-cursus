@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Converte uma string em um número inteiro (ASCII para inteiro).
-*/
 #include "libft.h"
 
 int	ft_atoi(const char *nptr)

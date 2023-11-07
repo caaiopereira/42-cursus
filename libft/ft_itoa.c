@@ -10,10 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	converte um numero inteiro para uma string
-*/
-
 #include "libft.h"
 
 static size_t	ft_itoa_size(int number)

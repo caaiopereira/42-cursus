@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Divide uma string em substrings com base em um delimitador.
-*/
 #include "libft.h"
 
 static size_t	ft_substring(const char *s, char c)

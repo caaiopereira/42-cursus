@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	verifica se há um caractere alfanumerico
-*/
 #include "libft.h"
 
 int	ft_isalnum(int c)

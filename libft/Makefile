@@ -17,10 +17,6 @@ all:$(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILESC)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
-
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 

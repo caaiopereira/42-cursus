@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Verifica se um caractere é uma letra.
-*/
 #include "libft.h"
 
 int	ft_isalpha(int c)

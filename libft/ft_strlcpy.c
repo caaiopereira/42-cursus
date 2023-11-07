@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Copia uma string em outra com controle de tamanho.
-*/
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

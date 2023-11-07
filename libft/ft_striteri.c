@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-	Aplica uma função a cada caractere de uma string.
-*/
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
