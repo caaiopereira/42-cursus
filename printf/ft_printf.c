@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 08:39:57 by caiperei          #+#    #+#             */
-/*   Updated: 2023/11/07 11:36:52 by caiperei         ###   ########.fr       */
+/*   Created: 2023/11/07 11:12:27 by caiperei          #+#    #+#             */
+/*   Updated: 2023/11/07 11:18:36 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include "ft_printf.h"
 
-int	ft_putnbr(int num)
+int	ft_printf(const char *format, ...)
 {
-	static int	count;
-	int			sign;
+	va_list	ap;
+	int		i;
+	int		result;
 
-	sign = 0;
-	count = 0;
-	if (num == -2147483648)
+	i = 0;
+	result = 0;
+	va_start(ap, format);
+	while (format[i])
 	{
-		count = write(1, "-2147483648", 11);
-		return (count);
+		if((format[i] == '%') && (ft_strchr("cspdiuxX%", format[i + 1])))
+		{
+			result += ft_format(format, i, ap);
+			i++;
+		}
+		else
+			result += ft_putchar(format[i]);
+		i++;
 	}
-	if (num < 0)
-	{
-		sign = ft_putchar('-');
-		num *= -1;
-	}
-	if (num >= 10)
-		ft_putnbr(num / 10);
-	count += ft_putchar((num % 10) + 48);
-	return (count + sign);
+	va_end(ap);
+	return (result);
 }
