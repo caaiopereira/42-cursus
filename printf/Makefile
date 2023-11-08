@@ -17,7 +17,7 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 FILESC = ft_format.c ft_putchar.c ft_putnbr.c ft_putnumber.c ft_puthex.c \
-		ft_putstr.c ft_strchr.c ft_printf.c
+ft_putstr.c ft_strchr.c ft_printf.c
 
 OBJS = $(FILESC:.c=.o)
 

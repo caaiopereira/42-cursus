@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnumber.c                                      :+:      :+:    :+:   */
+/*   ft_putnumber.c                                      :+:      :+:    :+:  */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -19,9 +19,8 @@ int	ft_putnumber(unsigned int num)
 
 	sign = 0;
 	count = 0;
-
 	if (num >= 10)
-			ft_putnumber(num / 10);
+		ft_putnumber(num / 10);
 	count += ft_putchar((num % 10) + 48);
 	return (count + sign);
 }

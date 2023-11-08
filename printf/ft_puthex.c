@@ -13,7 +13,7 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-static void	to_char(unsigned long n, int arg, int *count)
+static void	ft_char(unsigned long n, int arg, int *count)
 {
 	const char	*alpha_up = "0123456789ABCDEF";
 	const char	*alpha_low = "0123456789abcdef";
@@ -25,11 +25,11 @@ static void	to_char(unsigned long n, int arg, int *count)
 		hex = alpha_low[n % 16];
 	else if (arg == 'p')
 		hex = alpha_low[n % 16];
-	write(1, &hex, 1);
+	write (1, &hex, 1);
 	(*count)++;
 }
 
-static int	if_pointer(unsigned long d)
+static int	ft_pointer(unsigned long d)
 {
 	if (d == 0)
 	{
@@ -37,7 +37,7 @@ static int	if_pointer(unsigned long d)
 		return (3);
 	}
 	else
-		return(0);
+		return (0);
 }
 
 int	ft_puthex(unsigned long d, int arg)
@@ -50,11 +50,11 @@ int	ft_puthex(unsigned long d, int arg)
 	if (d == 0)
 	{
 		if (arg == 'p')
-			return (if_pointer(d));
-		to_char(d, arg, &count);
+			return (ft_pointer(d));
+		ft_char(d, arg, &count);
 	}
 	if (arg == 'p' && d != 0)
-			ft_putstr("0x");
+		ft_putstr("0x");
 	i = 0;
 	while (d > 0)
 	{
@@ -62,6 +62,6 @@ int	ft_puthex(unsigned long d, int arg)
 		d /= 16;
 	}
 	while (--i >= 0)
-		to_char(digits[i], arg, &count);
+		ft_char(digits[i], arg, &count);
 	return (count);
 }

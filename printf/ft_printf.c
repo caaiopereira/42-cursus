@@ -24,7 +24,7 @@ int	ft_printf(const char *format, ...)
 	va_start(ap, format);
 	while (format[i])
 	{
-		if((format[i] == '%') && (ft_strchr("cspdiuxX%", format[i + 1])))
+		if ((format[i] == '%') && (ft_strchr("cspdiuxX%", format[i + 1])))
 		{
 			result += ft_format(format, i, ap);
 			i++;

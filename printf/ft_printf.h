@@ -21,5 +21,6 @@ int	ft_putnumber(unsigned int nb);
 int	ft_puthex(unsigned long d, int arg);
 int	ft_putstr(char *str);
 int	ft_putnbr(int nb);
+int	ft_printf(const char *format, ...);
 
 #endif
