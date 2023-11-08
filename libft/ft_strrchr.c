@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *str, int c)
 {
 	const char	*ini;
 
-	ini = 0;
+	ini = NULL;
 	while (*str != '\0')
 	{
 		if (*str == c)
