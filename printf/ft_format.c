@@ -29,4 +29,5 @@ int	ft_format(const char *arg, int i, va_list ap)
 	else if (arg[i + 1] == '%')
 		return (ft_putchar('%'));
 	return (0);
+	
 }
