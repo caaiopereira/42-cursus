@@ -6,7 +6,7 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 13:52:49 by caiperei          #+#    #+#             */
-/*   Updated: 2023/11/21 09:40:18 by caiperei         ###   ########.fr       */
+/*   Updated: 2023/11/21 11:20:33 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 20
+#  define BUFFER_SIZE 42
 # endif
 
 char	*get_next_line(int fd);
