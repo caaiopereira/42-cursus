@@ -42,26 +42,27 @@ static char	*rest_line(char *line)
 static char	*cut_line(char *line)
 {
 	size_t	i;
-	char	*line_cut;
+	char	*cut;
 
 	i = 0;
 	if (!*line)
 		return (NULL);
 	while (line[i] && line[i] != '\n')
 		i++;
-	line_cut = malloc(sizeof(char) * i + 2);
-	if (!(line_cut))
+	cut = malloc(sizeof(char) * i + 2);
+	if (!(cut))
 		return (NULL);
 	i = 0;
 	while (line[i] && line[i] != '\n')
 	{
-		line_cut[i] = line[i];
+		cut[i] = line[i];
 		i++;
 	}
 	if (line[i] == '\n')
-		line_cut[i++] = '\n';
-	line_cut[i] = '\0';
-	return (line_cut);
+		cut[i++] = '\n';
+	
+	cut[i] = '\0';
+	return (cut);
 }
 
 static char	*read_line(char *line, int fd)
