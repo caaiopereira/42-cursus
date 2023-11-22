@@ -60,7 +60,6 @@ static char	*cut_line(char *line)
 	}
 	if (line[i] == '\n')
 		cut[i++] = '\n';
-	
 	cut[i] = '\0';
 	return (cut);
 }
