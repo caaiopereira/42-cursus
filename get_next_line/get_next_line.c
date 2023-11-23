@@ -38,56 +38,62 @@ static char	*rest_line(char *line)
 		rest[count++] = line[i++];//copia line para rest
 	rest[count] = '\0';
 	free(line);//liberação de memória
-	return (rest);
+	return (rest);//retorna a linha apos o \n
 }
 
+//extrai e corta uma linha até o \n
 static char	*cut_line(char *line)
 {
-	size_t	i;
-	char	*cut;
+	size_t	i;//percorrer string
+	char	*cut;//armazenar linha cortada
 
 	i = 0;
-	if (!*line)
-		return (NULL);
-	while (line[i] && line[i] != '\n')
+	if (!*line)//verificação se line esta vazia
+		return (NULL);//retornar null caso não há nada para cortar
+	while (line[i] && line[i] != '\n')//percorre até o \n
 		i++;
-	cut = malloc(sizeof(char) * i + 2);
+	cut = malloc(sizeof(char) * i + 2);//aloca na memoria, +2 para \n e o \0
 	if (!(cut))
-		return (NULL);
+		return (NULL);//verificação de memoria valida, caso nao retorna null
 	i = 0;
 	while (line[i] && line[i] != '\n')
 	{
-		cut[i] = line[i];
-		i++;
+		cut[i] = line[i];//copia line para cut
+		i++;//incrementa até encontrar \n ou \0 da string
 	}
 	if (line[i] == '\n')
-		cut[i++] = '\n';
-	cut[i] = '\0';
-	return (cut);
+		cut[i++] = '\n';//adiciona \n
+	cut[i] = '\0';//adiciona nulo indicando fim da string
+	return (cut);//retorna a linha cortada
 }
 
+//ler o conteudo até encontrar o \n
 static char	*read_line(char *line, int fd)
 {
-	char	*buffer;
-	int		count;
+	char	*buffer;//armazenar linha
+	int		count;//guardar numero de bytes lidos
 
 	count = 1;
 	buffer = malloc(BUFFER_SIZE + 1);
+	//aloca na memoria com tamanho especificado(BUFFER_SIZE), +1 para o \0
 	if (!(buffer))
-		return (NULL);
+		return (NULL);//verificação de memoria valida, caso nao retorna null
 	while (count > 0 && !ft_strchr(line, '\n'))
-	{
+	{//loop caso nao encontre \n
 		count = read(fd, buffer, BUFFER_SIZE);
+		//ler o conteudo 
 		if (count < 0)
+		//verificação de erro durante a leitura
 		{
-			free(buffer);
+			free(buffer);//liberação de memoria
 			return (NULL);
 		}
-		buffer[count] = '\0';
+		buffer[count] = '\0';//adiciona nulo
 		line = ft_strjoin(line, buffer);
+		//concatena o buffer com line indicando como dados lidos
 	}
-	free(buffer);
-	return (line);
+	free(buffer);//liberação de memoria apos a leitura
+	return (line);//retorna line contendo os dados lidos até o momento
 }
 
 char	*get_next_line(int fd)
