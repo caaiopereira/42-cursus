@@ -67,7 +67,7 @@ static char	*cut_line(char *line)
 	return (cut);//retorna a linha cortada
 }
 
-//ler o conteudo até encontrar o \n
+//ler o conteudo até encontrar o \n ou \0
 static char	*read_line(char *line, int fd)
 {
 	char	*buffer;//armazenar linha
@@ -96,17 +96,18 @@ static char	*read_line(char *line, int fd)
 	return (line);//retorna line contendo os dados lidos até o momento
 }
 
+//ler linhas de um arquivo uma por vez
 char	*get_next_line(int fd)
 {
-	static char	*string;
+	static char	*string;//variavel estatica para manter conteudo
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)//verifica se são valores positivos
 		return (NULL);
-	string = read_line(string, fd);
+	string = read_line(string, fd);//chama a função para ler e armazenar na variavel
 	if (!(string))
-		return (NULL);
-	line = cut_line(string);
-	string = rest_line(string);
-	return (line);
+		return (NULL);//verifica se houve falha ou chegou no final do arquivo
+	line = cut_line(string);//função para extrair uma linha lida
+	string = rest_line(string);// atualiza a variavel e armazena o restante apos a liha cortada
+	return (line);// retorna a linha lida
 }
