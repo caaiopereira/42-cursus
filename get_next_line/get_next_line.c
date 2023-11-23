@@ -107,7 +107,7 @@ char	*get_next_line(int fd)
 	string = read_line(string, fd);//chama a função para ler e armazenar na variavel
 	if (!(string))
 		return (NULL);//verifica se houve falha ou chegou no final do arquivo
-	line = cut_line(string);//função para extrair uma linha lida
-	string = rest_line(string);// atualiza a variavel e armazena o restante apos a liha cortada
-	return (line);// retorna a linha lida
+	line = cut_line(string);//função para extrair uma linha da string lida
+	string = rest_line(string);// atualiza a variavel e armazena o restante apos a linha cortada
+	return (line);// retorna a linha que foi lida
 }
