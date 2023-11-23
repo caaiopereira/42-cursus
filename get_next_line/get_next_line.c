@@ -12,12 +12,12 @@
 
 #include "get_next_line.h"
 
-
+//extrai e retornar a string apos o \n
 static char	*rest_line(char *line)
 {
 	size_t	i;//percorrer string
 	char	*rest;//armazenar conteudo apos \n
-	size_t	count;//rastrear o i ao preencher rest
+	size_t	count;
 
 	i = 0;
 	while (line[i] && line[i] != '\n')//percorre até o \n 
@@ -25,19 +25,19 @@ static char	*rest_line(char *line)
 	if (!(line[i]))//verifica se caractere atual é o \0
 	{
 		free(line);// libera a memoria
-		return (NULL);// caso nao há mais conteudo
+		return (NULL);// caso nao há mais conteudo retornar null
 	}
 	if (line[i] == '\n')//verifica se é o \n
 		i++;//incrementa para o prox caractere apos \n
 	rest = malloc(sizeof(char) * ft_strlen(line) - i + 1);
 	//aloca memória para o conteúdo restante, -i para calcular tamanho da alocação
 	if (!(rest))
-		return (NULL);
+		return (NULL);//verificação de memoria valida, caso nao retorna null
 	count = 0;
 	while (line[i])
-		rest[count++] = line[i++];
+		rest[count++] = line[i++];//copia line para rest
 	rest[count] = '\0';
-	free(line);
+	free(line);//liberação de memória
 	return (rest);
 }
 
