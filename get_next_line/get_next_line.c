@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-//extrai e retornar a string apos o \n
+//atualiza o conteudo apos a primeira linha lida
 static char	*rest_line(char *line)
 {
 	size_t	i;//percorrer string
@@ -20,7 +20,7 @@ static char	*rest_line(char *line)
 	size_t	count;
 
 	i = 0;
-	while (line[i] && line[i] != '\n')//percorre até o \n 
+	while (line[i] && line[i] != '\n')//calcula o tamanho de line 
 		i++;
 	if (!(line[i]))//verifica se caractere atual é o \0
 	{
@@ -30,18 +30,19 @@ static char	*rest_line(char *line)
 	if (line[i] == '\n')//verifica se é o \n
 		i++;//incrementa para o prox caractere apos \n
 	rest = malloc(sizeof(char) * ft_strlen(line) - i + 1);
-	//aloca memória para o conteúdo restante, -i para calcular tamanho da alocação
+	//rest recebe tamanho total de line, subtrai (i) e +1 para nulo no final
+	//para calcular tamanho da alocação
 	if (!(rest))
 		return (NULL);//verificação de memoria valida, caso nao retorna null
 	count = 0;
-	while (line[i])
+	while (line[i])//line começa a copiar apartir da posição onde foi diminuido de i
 		rest[count++] = line[i++];//copia line para rest
 	rest[count] = '\0';
 	free(line);//liberação de memória
 	return (rest);//retorna a linha apos o \n
 }
 
-//extrai e corta uma linha até o \n
+//corta e retorna a primeira linha
 static char	*cut_line(char *line)
 {
 	size_t	i;//percorrer string
@@ -67,7 +68,7 @@ static char	*cut_line(char *line)
 	return (cut);//retorna a linha cortada
 }
 
-//ler o conteudo até encontrar o \n ou \0
+//ler e guarda o conteudo
 static char	*read_line(char *line, int fd)
 {
 	char	*buffer;//armazenar linha
@@ -81,7 +82,7 @@ static char	*read_line(char *line, int fd)
 	while (count > 0 && !ft_strchr(line, '\n'))
 	{//loop caso nao encontre \n
 		count = read(fd, buffer, BUFFER_SIZE);
-		//ler o conteudo 
+		//ler o conteudo em blocos adicionando ao buffer
 		if (count < 0)
 		//verificação de erro durante a leitura
 		{
@@ -104,10 +105,33 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)//verifica se são valores positivos
 		return (NULL);
-	string = read_line(string, fd);//chama a função para ler e armazenar na variavel
+	string = read_line(string, fd);//ler e guarda o conteudo
 	if (!(string))
 		return (NULL);//verifica se houve falha ou chegou no final do arquivo
-	line = cut_line(string);//função para extrair uma linha da string lida
-	string = rest_line(string);// atualiza a variavel e armazena o restante apos a linha cortada
+	line = cut_line(string);//corta e retorna a primeira linha
+	string = rest_line(string);//atualiza o conteudo apos a primeira linha lida
 	return (line);// retorna a linha que foi lida
 }
+
+/*
+a\n 	i = 2
+b\n
+c\0
+
+i = 2+1
+i = 3
+
+rest = (6) - i (3) + 1
+
+rest = (4)
+
+rest[count](4) = line[i](3)
+
+rest[count] = b\n
+	       c
+
+rest[count] = \0
+
+rest = b\n
+ 	c\0
+ */
