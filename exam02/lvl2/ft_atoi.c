@@ -19,7 +19,7 @@ int ft_atoi(char *str)
     int sign = 1;
 
     // Ignora espaços em branco no início da string
-    while (*str == ' ' || (*str >= 9 && *str <= 13))
+    while (*str == ' ' || *str >= 9 && *str <= 13)
         str++;
 
     // Verifica se o próximo caractere é um sinal negativo
