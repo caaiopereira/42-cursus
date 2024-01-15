@@ -25,10 +25,12 @@ int main(int ac, char **av)
             // Se o caractere atual for uma letra minúscula
             if (av[1][i] >= 'a' && av[1][i] <= 'z')
                 av[1][i] = 219 - av[1][i]; // Substitui o caractere pela operação específica (219 - av[1][i])
+                //219 -> soma de a + z das posições pela tabela ascii
 
             // Se o caractere atual for uma letra maiúscula
             if (av[1][i] >= 'A' && av[1][i] <= 'Z')
-                av[1][i] = 155 - av[1][i]; // Substitui o caractere pela operação específica (155 - av[1][i])
+                av[1][i] = 155 - av[1][i]; // Substitui o caractere pela operação específica (155 - av[1][i]),
+                //155 -> soma de A + Z das posições pela tabela ascii
 
             // Escreve o caractere resultante no stdout
             write(1, &av[1][i], 1);
