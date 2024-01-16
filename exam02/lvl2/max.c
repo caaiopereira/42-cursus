@@ -6,14 +6,14 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 08:57:46 by caiperei          #+#    #+#             */
-/*   Updated: 2023/12/13 10:19:37 by caiperei         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:34:04 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int max(int *tab, unsigned int len)
 {
     unsigned int i;
-    int max;
+    unsigned int max;
 
     // Verifica se o comprimento do array é zero
     if (len == 0)
@@ -42,7 +42,7 @@ int max(int *tab, unsigned int len)
 int	max(int	*tab, unsigned int len)
 {
 	unsigned int	i;
-	int	max;
+	unsigned int	max;
 
 	if (len == 0)
 		return (0);
