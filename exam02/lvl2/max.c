@@ -12,7 +12,7 @@
 
 int max(int *tab, unsigned int len)
 {
-    int i;
+    unsigned int i;
     int max;
 
     // Verifica se o comprimento do array é zero
@@ -41,7 +41,7 @@ int max(int *tab, unsigned int len)
 /*
 int	max(int	*tab, unsigned int len)
 {
-	int	i;
+	unsigned int	i;
 	int	max;
 
 	if (len == 0)
