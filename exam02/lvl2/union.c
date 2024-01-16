@@ -49,3 +49,30 @@ int main(int ac, char **av)
     write(1, "\n", 1);
 }
 
+/*
+#include <unistd.h>
+
+int main(int ac, char **av)
+{
+	if(ac == 3)
+	{
+		int ascii[255] = {0};
+
+		for(int i = 0; i < 3; i += 1)
+		{
+			int x = 0;
+			while(av[i][x])
+			{
+				if(ascii[(int)av[i][x]] == 0)
+				{
+					ascii[(int)av[i][x]] = 1;
+					write(1, &av[i][x], 1);
+				}
+				x += 1;
+			}
+		}
+	}
+	write(1, "\n", 1);
+}
+*/
+

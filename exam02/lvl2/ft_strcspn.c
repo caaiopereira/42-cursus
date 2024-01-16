@@ -35,3 +35,26 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	}
 	return i;//retorna o comprimento total
 }
+
+/*
+#include <stddef.h>
+
+size_t  ft_strcspn(const char *s, const char *reject)
+{
+    int     i = 0;
+    int     x = 0;
+
+    while (s[i] != '\0')
+    {
+		x = 0;
+        while (reject[x] != '\0')
+        {
+            if(s[i] == reject[x])
+                return (i);
+            x++;
+        }
+        i++;
+    }
+    return (i);
+}
+*/
