@@ -33,5 +33,5 @@ int main(int ac, char const **av)
 			printf("%d", nbr1);
 		}
 	}
-	printf("\n")
+	printf("\n");
 }

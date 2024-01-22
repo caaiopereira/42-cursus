@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib>//malloc
-
+#include <stdlib.h>//malloc
 
 int *ft_rrange(int start, int end)
 {

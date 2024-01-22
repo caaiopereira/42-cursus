@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib>// malloc
+#include <stdlib.h>// malloc
 
 int *ft_range(int start, int end)
 {
@@ -22,7 +22,7 @@ int *ft_range(int start, int end)
 	{
 		if(end > start)
 		{
-			res[i] = start;;
+			res[i] = start;
 			start++;
 			i++;
 		}
