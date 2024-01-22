@@ -30,6 +30,8 @@ void	rstr_capitalizer(char *str)
 
 int main(int ac, char **av)
 {
+	int i;
+
 	if(ac == 1)
 		write(1, "\n", 1);
 	else

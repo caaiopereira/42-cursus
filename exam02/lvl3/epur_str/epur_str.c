@@ -26,7 +26,7 @@ int main(int ac, char **av)
 		{
 			if(av[1][i] == ' ' || av[1][i] == '\t')
 				flg = 1;
-			if (!(av[1][i] == ' ' || av[1][i] '\t'))
+			if (!(av[1][i] == ' ' || av[1][i] == '\t'))
 			{
 				if (flg)
 					write(1, " ", 1);
