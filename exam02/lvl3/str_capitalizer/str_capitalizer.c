@@ -6,7 +6,7 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 14:11:03 by caiperei          #+#    #+#             */
-/*   Updated: 2024/01/21 14:11:04 by caiperei         ###   ########.fr       */
+/*   Updated: 2024/01/22 14:20:45 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,19 @@ void	str_capitalizer(char *str)
 {
 	int i = 0;
 
-	if(str[i] >= 'a' && str[i] <= 'z')
-		str[i] = str[i] - 32;
-	write(1, &str[i], 1);
-	while(str[i])
-	{
-		if(str[i] >= 'A' && str[i] <= 'Z')
-			str[i] = str[i] + 32;
-		if((str[i] >= 'a' && str[i] <= 'z') && (str[i - 1] == ' ' || str[i - 1] == '\t'))
+		if(str[i] >= 'a' && str[i] <= 'z')
 			str[i] = str[i] - 32;
 		write(1, &str[i], 1);
-		i++;
-	}
+		i += 1;
+		while (str[i])
+		{
+			if(str[i] >= 'A' && str[i] <= 'Z')
+				str[i] = str[i] + 32;
+			if((str[i] >= 'a' && str[i] <= 'z') && (str[i - 1] == ' ' || str[i - 1] == '\t'))
+				str[i] = str[i] - 32;
+			write(1, &str[i], 1);
+			i++;
+		}
 }
 
 int main(int ac, char **av)
@@ -46,5 +47,4 @@ int main(int ac, char **av)
 			i++;
 		}
 	}
-	return 0;
 }
