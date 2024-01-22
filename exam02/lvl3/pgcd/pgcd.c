@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>//printf
-#include <stdlib.h>//atoi
-
+#include <stdio.h>
+#include <stdlib.h>
 
 int main(int ac, char const **av)
 {

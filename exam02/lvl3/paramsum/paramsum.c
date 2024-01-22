@@ -24,7 +24,7 @@ void	ft_putnbr(int n)
 
 int main(int ac, char **av)
 {
-	(void)ac;
+	(void)av;
 
 	ft_putnbr(ac - 1);
 	write(1, "\n", 1);
