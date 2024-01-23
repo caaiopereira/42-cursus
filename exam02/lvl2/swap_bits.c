@@ -12,9 +12,6 @@
 
 unsigned char swap_bits(unsigned char octet)
 {
-    // Desloca os 4 bits mais significativos para a direita (rotação para a direita)
-    // e os 4 bits menos significativos para a esquerda (rotação para a esquerda),
-    // depois combina os dois resultados usando a operação de OU bit a bit.
     return ((octet >> 4) | (octet << 4));
 }
 

@@ -12,54 +12,24 @@
 
 #include <unistd.h>
 
-int main(int argc, char **argv)
-{
-    int i;
-    
-    i = 0;
-    // Verifica se há exatamente dois argumentos passados para o programa
-    if (argc == 2)
-    {
-        // Itera através dos caracteres da segunda string até o final
-        while (argv[1][i] != '\0')
-        {
-            // Verifica se o caractere atual é um sublinhado
-            if (argv[1][i] == '_')
-            {
-                i++; // Avança para o próximo caractere
-                // Converte o caractere para maiúscula (assumindo ASCII)
-                argv[1][i] = argv[1][i] - 32;
-            }
-            // Escreve o caractere atual na saída padrão
-            write(1, &argv[1][i], 1);
-            i++; // Avança para o próximo caractere
-        }
-    }
-    // Escreve uma quebra de linha indicando o final da string
-    write(1, "\n", 1);
-}
-
-/*
-#include <unistd.h>
-
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
 	int i = 0;
 	
-	if (argc == 2)
+	if (ac == 2)
 	{
-		while(argv[1][i] != '\0')
+		while(av[1][i] != '\0')
 		{
-			if (argv[1][i] == '_')
+			if (av[1][i] == '_')
 			{
 				i++;
-				argv[1][i] = argv[1][i] - 32;
+				av[1][i] = av[1][i] - 32;
 			}
-			write (1, &argv[1][i], 1);
+			write (1, &av[1][i], 1);
 			i++;
 		}
 	}
 	write(1, "\n", 1);
 }
-*/
+
 
