@@ -37,7 +37,7 @@ int main(int ac, char **av)
 	else
 	{
 		i = 1;
-		while(av > i)
+		while(ac > i)
 		{
 			rstr_capitalizer(av[i]);
 			write(1, "\n", 1);
