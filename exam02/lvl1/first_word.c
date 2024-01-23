@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>//biblioteca para write
+#include <unistd.h>
 
-//função para imprimir
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
@@ -23,20 +22,16 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 0;
-	if (argc == 2)//verifica se há mais de 1 argumento após o ./a.out
+	if (argc == 2)
 	{
-		while (argv[1][i] == ' ' || argv[1][i] == '\t')//agrv[1] -> seleciona o argumento
-		//loop até encontrar o primeiro caractere que não é espace/tab na string
+		while (argv[1][i] == ' ' || argv[1][i] == '\t')
 			i++;
 		while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
-		{//loop para verificar caracteres ignorando espace/tab até o \0
+		{
 			ft_putchar(argv[1][i]);
-			//imprime o caractere atual
 			i++;
-			//avança para o proximo caractere
 		}
 	}
 	ft_putchar('\n');
-	//caso não ter mais de 1 argumento ou nao houver palvras exiba \n
 	return (0);
 }

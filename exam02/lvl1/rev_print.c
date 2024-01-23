@@ -14,19 +14,18 @@
 
 int	main(int argc, char **argv)
 {
-	int	i;//percorrer string
+	int	i;
 
 	i = 0;
-	if (argc == 2)//verifica se o numero de argumentos passados é  igual 2
+	if (argc == 2)
 	{
-		while(argv[1][i] != '\0')//calcula o comprimento da string
+		while(argv[1][i] != '\0')
 			i++;
 		while (i >= 1)
 		{
 			write(1, &argv[1][i - 1], 1);
-			//imprime invertendo a string de posição
 			i--;
 		}
 	}
-	write(1, "\n", 1);//imprime \n caso o numero de argumentos nao for 2
+	write(1, "\n", 1);
 }

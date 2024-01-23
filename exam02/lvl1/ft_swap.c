@@ -14,9 +14,7 @@ void	ft_swap(int *a, int *b)
 {
 	int	swap;
 
-	swap = *a; //swap recebe valor de a
-	*a = *b; //a recebe valor de b
-	*b = swap; //b recebe valor de swap
-
-	//fazendo troca de valores com variavel auxiliar
+	swap = *a;
+	*a = *b;
+	*b = swap;
 }
