@@ -6,7 +6,7 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 14:08:25 by caiperei          #+#    #+#             */
-/*   Updated: 2024/01/21 14:08:45 by caiperei         ###   ########.fr       */
+/*   Updated: 2024/01/30 10:43:38 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 int main(int ac, char **av)
 {
-	int i;
-	int flg;
+	int i = 0;
+	int flg = 0;
 
 	if(ac == 2)
 	{
-		i = 0;
 		while(av[1][i] == ' ' || av[1][i] == '\t')
 			i++;
 		while(av[1][i])
