@@ -20,7 +20,8 @@ void	print_bits(int bit)
 
 int	main(void)
 {
-	ft_printf("\t Server PID: %d\n", getpid());
+	ft_printf("SERVER PID: %d\n", getpid());
+	ft_printf("\n");
 	while (1)
 	{
 		signal(SIGUSR1, print_bits);
