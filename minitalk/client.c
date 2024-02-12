@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 	if (argc != 3 || !argv[2])
 	{
 		ft_printf("Error! Você deve informar");
-		ft_printf(" <PID> <MENSAGEM QUE QUER ENVIAR>\n");
+		ft_printf(" <PID> <MENSAGEM>\n");
 		exit(1);
 	}
 	send_bits(ft_atoi(argv[1]), argv[2]);
