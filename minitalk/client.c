@@ -6,7 +6,7 @@
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 13:20:28 by caiperei          #+#    #+#             */
-/*   Updated: 2024/02/21 13:20:32 by caiperei         ###   ########.fr       */
+/*   Updated: 2024/02/21 13:36:54 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,21 @@ void	send_bits(int pid, char *str)
 			else
 				kill(pid, SIGUSR2);
 			i++;
-			usleep(500);
+			usleep(600);
 		}
 		str++;
 		i = 0;
 	}
 }
 
-int	main(int argc, char **argv)
+int	main(int ac, char **av)
 {
-	if (argc != 3 || !argv[2])
+	if (ac != 3 || !av[2])
 	{
 		ft_printf("Error! Você deve informar");
 		ft_printf(" <PID> <MENSAGEM>\n");
 		exit(1);
 	}
-	send_bits(ft_atoi(argv[1]), argv[2]);
+	send_bits(ft_atoi(av[1]), av[2]);
 	return (0);
 }
