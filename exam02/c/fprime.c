@@ -4,7 +4,7 @@
 		n = atoi av1
 		if n == 1
 			print 1
-		while n >= i++
+		wh n >= i++
 			if n % i == 0
 				print %d i
 				if n == i
