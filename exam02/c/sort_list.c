@@ -1,17 +1,17 @@
-stdlib
+stdlib //dt = data, nt = next
 "list.h"
 
 it s
 t_list *t
 
 t = lst
-wh lst->next != null
-	if (*cmp)(lst->data, lst->next->data) == 0
-		s = lst->data
-		lst->data = lst->next->data
-		lst->next->data = s
+wh lst->nt != 0
+	if (*cmp)(lst->dt, lst->nt->dt) == 0
+		s = lst->dt
+		lst->dt = lst->nt->dt
+		lst->nt->dt = s
 		lst = t
 	else
-		lst = lst->next
+		lst = lst->nt
 lst = t
 return lst

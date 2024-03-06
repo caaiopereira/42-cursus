@@ -17,10 +17,10 @@ size_t  ft_strcspn(const char *s, const char *reject)
     int     i = 0;
     int     x = 0;
 
-    while (s[i] != '\0')
+    while (s[i])
     {
 		x = 0;
-        while (reject[x] != '\0')
+        while (reject[x])
         {
             if(s[i] == reject[x])
                 return (i);
