@@ -19,7 +19,6 @@
 #  define BUFFER_SIZE 42
 # endif
 
-
 int		ft_isalnum(const int i);
 int		ft_isalpha(const int i);
 int		ft_isascii(const int i);
@@ -55,6 +54,5 @@ void	*ft_bzero(void *s, size_t n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*get_next_line(int fd);
-
 
 #endif
