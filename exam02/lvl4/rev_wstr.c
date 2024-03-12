@@ -38,9 +38,7 @@ int main(int ac, char **av)
 				start++;		
 			}
 			if (flg != 0)
-			{
 				write(1, " ", 1);
-			}
 		}
 	}
 	write(1, "\n", 1);
