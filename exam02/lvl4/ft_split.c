@@ -11,16 +11,15 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 char *ft_strncpy(char *s1, char *s2, int n)
 {
 	int i = -1;
 
-	while (++i < n && s2[i])
+	while (n > ++i && s2[i])
 		s1[i] = s2[i];
 	s1[i] = '\0';
-	return (s1);
+	return s1;
 }
 
 char	**ft_split(char *str)
@@ -53,6 +52,6 @@ char	**ft_split(char *str)
 			ft_strncpy(out[k++], &str[j], i - j);
 		}
 	}
-	out[k] = NULL;
-	return (out);
+	out[k] = 0;
+	return out;
 }
