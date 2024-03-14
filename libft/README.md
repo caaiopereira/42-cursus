@@ -7,10 +7,8 @@ Disclaimer: Reinventing the wheel is bad, 42 makes us do this just so we can hav
 
 # What's in it?
 
-As you can see from the Project instructions, there are 4 sections:
-
-> <i>
+> <i>As you can see from the Project instructions, there are 4 sections:
 > 1. Libc Functions: Some of the standard C functions
-> 2. Additional functions: Functions 42 deems will be useful for later projects
-> 3. Bonus Functions: Functions 42 deems will be useful for linked list manipulation
-> 4. Personal Functions: Functions I believe will be useful later. Documented here.</i>
+> 2. Additional functions: Functions 42 deems will be useful for later projects;
+> 3. Bonus Functions: Functions 42 deems will be useful for linked list manipulation;
+> 4. Personal Functions: Functions I believe will be useful later. Documented here;</i>
