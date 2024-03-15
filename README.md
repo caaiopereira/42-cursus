@@ -41,3 +41,5 @@
 		The school is open 24/7. Thus, the cadets are free to work whenever they want, which
 		demands excellent time management skills and resiliency for not "drowning" amid the
 		massive load of work demanded by the program.
+  
+repost(@appinha)
