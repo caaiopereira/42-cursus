@@ -13,15 +13,15 @@
 void	sort_int_tab(int *tab, unsigned int size)
 {
 	unsigned int i = 0;
-	int	temp;
+	int	swap;
 
 	while ((size - 1) > i)
 	{
 		if (tab[i] > tab[i + 1])
 		{
-			temp = tab[i];
+			swap = tab[i];
 			tab[i] = tab[i + 1];
-			tab[i + 1] = temp;
+			tab[i + 1] = swap;
 			i = 0;
 		}
 		else
