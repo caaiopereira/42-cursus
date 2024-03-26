@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   union.c                                            :+:      :+:    :+:   */
+/*   reverse_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 13:02:59 by caiperei          #+#    #+#             */
-/*   Updated: 2024/01/12 13:23:42 by caiperei         ###   ########.fr       */
+/*   Created: 2024/03/26 10:59:16 by caiperei          #+#    #+#             */
+/*   Updated: 2024/03/26 10:59:40 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int main(int ac, char **av)
+unsigned char	reverse_bits(unsigned char octet)
 {
-	if(ac == 3)
-	{
-		int ascii[255] = {0};
+	int		i = 8;
+	unsigned char	res = 0;
 
-		for(int i = 0; i < 3; i++)
-		{
-			int x = 0;
-			while(av[i][x])
-			{
-				if(ascii[(int)av[i][x]] == 0)
-				{
-					ascii[(int)av[i][x]] = 1;
-					write(1, &av[i][x], 1);
-				}
-				x++;
-			}
-		}
+	while (i > 0)
+	{
+		res = res * 2 + (octet % 2);
+		octet = octet / 2;
+		i--;
 	}
-	write(1, "\n", 1);
+	return res;
 }
