@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/12 13:02:59 by caiperei          #+#    #+#             */
-/*   Updated: 2024/01/12 13:23:42 by caiperei         ###   ########.fr       */
+/*   Created: 2024/04/01 14:32:06 by caiperei          #+#    #+#             */
+/*   Updated: 2024/04/01 14:41:57 by caiperei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,21 @@ int main(int ac, char **av)
 	{
 		int ascii[255] = {0};
 
-		for(int i = 0; i < 3; i++)
+		for (int i = 1; i < 3; i++)
 		{
-			int x = 0;
-			while(av[i][x])
+			int j = 0;
+			while(av[i][j])
 			{
-				if(ascii[(int)av[i][x]] == 0)
+				if(ascii[(int)av[i][j]] == 0)
 				{
-					ascii[(int)av[i][x]] = 1;
-					write(1, &av[i][x], 1);
+					ascii[(int)av[i][j]] = 1;
+					write(1, &av[i][j], 1);
 				}
-				x++;
+				j++;
 			}
 		}
 	}
 	write(1, "\n", 1);
 }
+
+
