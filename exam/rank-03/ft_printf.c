@@ -1,3 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: caiperei <caiperei@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/04 12:53:43 by caiperei          #+#    #+#             */
+/*   Updated: 2024/04/04 13:12:34 by caiperei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+#include <stdarg.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
 
@@ -48,3 +63,4 @@ int	ft_printf(const char *format, ...)
 	}
 	return (va_end(p), len);
 }
+
