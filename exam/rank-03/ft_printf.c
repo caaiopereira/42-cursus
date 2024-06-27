@@ -12,9 +12,6 @@
 
 #include <unistd.h>
 #include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdarg.h>
 
 void	put_str(char *str, int *len)
 {
